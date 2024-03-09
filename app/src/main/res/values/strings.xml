@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SaludArte</string>
+    <string name="Despertar">Despertar</string>
+    <string name="desayunar">Desayunar</string>
+    <string name="almorzar">Almorzar</string>
+    <string name="cenar">Cenar</string>
+    <string name="merienda">Merienda</string>
+    <string name="taller">Taller</string>
+    <string name="clase">Clase</string>
+    <string name="dormir">Dormir</string>
+    <string name="ayuda">Ayuda</string>
+</resources>
