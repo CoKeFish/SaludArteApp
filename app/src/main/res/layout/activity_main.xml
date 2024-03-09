@@ -20,14 +20,13 @@
         android:paddingRight="16dp"
 
         android:paddingBottom="2dp"
-        android:scaleType="matrix"
+        android:scaleType="center"
         android:text="@string/Despertar"
         android:textSize="25sp"
 
-        app:icon="@drawable/icono_saludarte"
+        app:icon="@drawable/despertador"
         app:iconPadding="0dp"
 
-        app:iconSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +41,7 @@
         android:backgroundTint="#6CBC58"
 
         android:text="@string/desayunar"
-        app:icon="@drawable/icono_saludarte"
+        app:icon="@drawable/desayuno"
         app:iconPadding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
