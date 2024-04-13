@@ -24,8 +24,9 @@
         android:text="@string/Despertar"
         android:textSize="25sp"
 
-        app:icon="@drawable/despertador"
+        app:icon="@drawable/time"
         app:iconPadding="0dp"
+        app:iconSize="35dp"
 
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,9 +41,16 @@
         android:layout_height="50dp"
         android:backgroundTint="#6CBC58"
 
+        android:textSize="25sp"
+
+
+        android:fontFamily="@font/vodkasansregular"
+
         android:text="@string/desayunar"
         app:icon="@drawable/desayuno"
         app:iconPadding="0dp"
+
+        app:iconSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -53,6 +61,14 @@
         android:id="@+id/button3"
         android:layout_width="200dp"
         android:layout_height="50dp"
+
+        app:icon="@drawable/lunch"
+        app:iconPadding="0dp"
+
+        app:iconSize="35dp"
+        android:textSize="25sp"
+
+        android:fontFamily="@font/vodkasansregular"
         android:backgroundTint="#6CBC58"
         android:text="@string/almorzar"
         app:layout_constraintBottom_toTopOf="@+id/button4"
@@ -65,6 +81,14 @@
         android:id="@+id/button4"
         android:layout_width="200dp"
         android:layout_height="50dp"
+
+        app:icon="@drawable/dinner"
+        app:iconPadding="0dp"
+
+        android:textSize="25sp"
+        app:iconSize="35dp"
+
+        android:fontFamily="@font/vodkasansregular"
         android:backgroundTint="#6CBC58"
         android:text="@string/cenar"
         app:layout_constraintBottom_toTopOf="@+id/button5"
@@ -78,7 +102,15 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:backgroundTint="#6CBC58"
+        android:fontFamily="@font/vodkasansregular"
         android:text="@string/merienda"
+
+        android:textSize="25sp"
+        app:icon="@drawable/hotfood"
+
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -92,6 +124,14 @@
         android:backgroundTint="#6CBC58"
         android:text="@string/taller"
         app:layout_constraintBottom_toTopOf="@+id/button7"
+
+        app:icon="@drawable/lista"
+        app:iconPadding="0dp"
+
+        android:textSize="25sp"
+        app:iconSize="35dp"
+
+        android:fontFamily="@font/vodkasansregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +142,16 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:backgroundTint="#6CBC58"
+        android:fontFamily="@font/vodkasansregular"
         android:text="@string/clase"
+
+        android:textColorLink="#FAF1F1"
+        android:textSize="25sp"
+
+        app:icon="@drawable/presentacion"
+
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -115,6 +164,14 @@
         android:layout_height="50dp"
         android:backgroundTint="#6CBC58"
         android:text="@string/dormir"
+
+        app:icon="@drawable/dormir"
+        app:iconPadding="0dp"
+
+        android:textSize="25sp"
+        app:iconSize="35dp"
+
+        android:fontFamily="@font/vodkasansregular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,6 +196,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#6CBC58"
         android:text="@string/ayuda"
+
+        android:fontFamily="@font/vodkasansregular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
