@@ -1,19 +1,26 @@
 package com.marmary.saludarte
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.websocketdeneme.PieSocketListener
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.WebSocket
+import okhttp3.WebSocketListener
+
 
 class MainActivity : AppCompatActivity() {
+
+
+    private lateinit var webSocket: WebSocket
+    private val client by lazy { OkHttpClient() }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,27 +31,61 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val button = findViewById<Button>(R.id.button)
-        val client: OkHttpClient =  OkHttpClient()
+        initializeWebSocket()
+        val buttonIds = listOf(
+            R.id.button, R.id.button2, R.id.button3, R.id.button4,
+            R.id.button5, R.id.button6, R.id.button7, R.id.button8
+        )
 
-        button.setOnClickListener {
-            Log.d("PieSocket","Connecting");
-
-            val request: Request = Request
-                .Builder()
-                .url("http://172.20.10.3:7889")
-                .build()
-            val listener = PieSocketListener()
-            val ws: WebSocket = client.newWebSocket(request, listener)
+        // Asignar el mismo manejador de clics a todos los botones
+        buttonIds.forEach { buttonId ->
+            findViewById<Button>(buttonId).setOnClickListener { button ->
+                sendMessage((button as Button).text.toString())
+            }
         }
-
-
 
 
     }
 
 
+    private fun initializeWebSocket() {
+        val request = Request.Builder().url("ws://192.168.10.4:8765").build()
+        val listener = object : WebSocketListener() {
+            override fun onOpen(webSocket: WebSocket, response: okhttp3.Response) {
+                this@MainActivity.webSocket = webSocket
+                runOnUiThread { Toast.makeText(this@MainActivity, "Conexión WebSocket abierta", Toast.LENGTH_SHORT).show() }
+            }
 
+            override fun onMessage(webSocket: WebSocket, text: String) {
+                runOnUiThread { Toast.makeText(this@MainActivity, "Mensaje recibido: $text", Toast.LENGTH_SHORT).show() }
+            }
+
+            override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
+                println("Cierre del Socket: $code / $reason")
+            }
+
+            override fun onFailure(webSocket: WebSocket, t: Throwable, response: okhttp3.Response?) {
+                t.printStackTrace()
+            }
+        }
+
+        webSocket = client.newWebSocket(request, listener)
+    }
+
+    private fun sendMessage(message: String) {
+        if (this::webSocket.isInitialized && webSocket.send(message)) {
+            Toast.makeText(this, "Mensaje enviado: $message", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Error al enviar mensaje", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        webSocket.close(1000, "Aplicación cerrada")
+        client.dispatcher.executorService.shutdown()
+    }
 
 
 
