@@ -9,4 +9,9 @@
     <string name="clase">Clase</string>
     <string name="dormir">Dormir</string>
     <string name="ayuda">Ayuda</string>
+    <string name="settings">Settings</string>
+    <string name="ingrese_ip">ingrese ip</string>
+    <string name="volver">volver</string>
+    <string name="conectar">conectar</string>
+    <string name="configuraci_n_por_defecto">Configuración por defecto</string>
 </resources>

@@ -1,8 +1,10 @@
 package com.marmary.saludarte
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -44,12 +46,24 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val settingButton = findViewById<Button>(R.id.setting_button)
+
+        settingButton.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val connectButton = findViewById<Button>(R.id.connect_button)
+
+        connectButton.setOnClickListener {
+            reconnectWebSocket()
+        }
 
     }
 
 
     private fun initializeWebSocket() {
-        val request = Request.Builder().url("ws://192.168.10.4:8765").build()
+        val request = Request.Builder().url("ws://192.168.0.118:81").build()
         val listener = object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: okhttp3.Response) {
                 this@MainActivity.webSocket = webSocket
@@ -79,6 +93,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Error al enviar mensaje", Toast.LENGTH_SHORT).show()
         }
     }
+
+
+    private fun reconnectWebSocket() {
+        // Cerrar el WebSocket actual si está abierto
+        if (this::webSocket.isInitialized) {
+            webSocket.close(1000, "Reconectando")
+        }
+
+        // Inicializar una nueva conexión WebSocket
+        initializeWebSocket()
+    }
+
 
 
     override fun onDestroy() {

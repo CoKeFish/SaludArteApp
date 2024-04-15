@@ -190,6 +190,42 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/icono_saludarte" />
 
+
+    <Button
+        android:id="@+id/setting_button"
+        android:layout_width="79dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/settings"
+        android:scaleType="centerCrop"
+        app:icon="@drawable/configuraciones"
+        app:iconSize="35dp"
+        app:iconTint="#6CBC58"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        app:tint="#6CBC58" />
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="84dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/settings"
+        android:scaleType="centerCrop"
+        app:icon="@drawable/recargar"
+        app:iconSize="35dp"
+        app:iconTint="#6CBC58"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
