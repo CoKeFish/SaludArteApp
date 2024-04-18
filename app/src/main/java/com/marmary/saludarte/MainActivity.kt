@@ -4,7 +4,6 @@ package com.marmary.saludarte
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -63,7 +62,13 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initializeWebSocket() {
-        val request = Request.Builder().url("ws://192.168.0.118:81").build()
+
+        // Recuperar la IP guardada de SharedPreferences
+        val sharedPreferences = getSharedPreferences("MiPreferencia", MODE_PRIVATE)
+        val ipGuardada = sharedPreferences.getString("miClave", "192.168.0.118") // IP por defecto si no se encuentra ninguna
+
+
+        val request = Request.Builder().url("ws://${ipGuardada}:81").build()
         val listener = object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: okhttp3.Response) {
                 this@MainActivity.webSocket = webSocket
