@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="305dp"
+        android:text="@string/volver"
+        android:backgroundTint="#6CBD58"
+        android:backgroundTintMode="screen"
+        android:fontFamily="@font/vodkasansregular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/textViewAppInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:text="@string/objetivo_reproducir_sonidos_predeterminados_en_parlantes_ndesarrolladores_n_rodi_n_tabares_correa_rodtc_saludarte_com_n_angie_angie_saludarte_com_n_juan_esteban_jeste_saludarte_com_nconfiguraci_n_n_configura_la_ip_del_dispositivo_en_la_red_local_a_la_cual_debe_conectarse_la_app_aseg_rate_de_estar_conectado_a_la_misma_red_wifi_en_caso_de_cambiar_el_router_es_posible_que_necesites_reconfigurar_la_ip_nn_mero_de_tel_fono_de_soporte_123456789"
+        android:textSize="20sp"
+        android:fontFamily="@font/vodkasansregular"
+        android:backgroundTint="#6CBD58"
+        android:backgroundTintMode="screen"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

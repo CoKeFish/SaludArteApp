@@ -52,6 +52,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val helpButton = findViewById<Button>(R.id.button9)
+
+        helpButton.setOnClickListener {
+            val intent = Intent(this, HelpActivity::class.java)
+            startActivity(intent)
+        }
+
         val connectButton = findViewById<Button>(R.id.connect_button)
 
         connectButton.setOnClickListener {
