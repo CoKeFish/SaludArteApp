@@ -6,7 +6,7 @@
     <string name="cenar">Cenar</string>
     <string name="merienda">Merienda</string>
     <string name="taller">Taller</string>
-    <string name="clase">Clase</string>
+    <string name="clase">Bañarse</string>
     <string name="dormir">Dormir</string>
     <string name="ayuda">Ayuda</string>
     <string name="settings">Settings</string>
@@ -14,5 +14,5 @@
     <string name="volver">volver</string>
     <string name="conectar">conectar</string>
     <string name="configuraci_n_por_defecto">Configuración por defecto</string>
-    <string name="objetivo_reproducir_sonidos_predeterminados_en_parlantes_ndesarrolladores_n_rodi_n_tabares_correa_rodtc_saludarte_com_n_angie_angie_saludarte_com_n_juan_esteban_jeste_saludarte_com_nconfiguraci_n_n_configura_la_ip_del_dispositivo_en_la_red_local_a_la_cual_debe_conectarse_la_app_aseg_rate_de_estar_conectado_a_la_misma_red_wifi_en_caso_de_cambiar_el_router_es_posible_que_necesites_reconfigurar_la_ip_nn_mero_de_tel_fono_de_soporte_123456789">Objetivo: Reproducir sonidos predeterminados en parlantes.\nDesarrolladores:\n - Rodión Tabares Correa (rrtc26@gmail.com)\n - Angie Carvajal(angie@javeriana.com)\n - Juan Esteban (jeste@saludarte.com)\nConfiguración:\n - Configura la IP del dispositivo en la red local a la cual debe conectarse la app. Asegúrate de estar conectado a la misma red WiFi. En caso de cambiar el router, es posible que necesites reconfigurar la IP.\nNúmero de teléfono de soporte: +123456789</string>
+    <string name="objetivo_reproducir_sonidos_predeterminados_en_parlantes_ndesarrolladores_n_rodi_n_tabares_correa_rodtc_saludarte_com_n_angie_angie_saludarte_com_n_juan_esteban_jeste_saludarte_com_nconfiguraci_n_n_configura_la_ip_del_dispositivo_en_la_red_local_a_la_cual_debe_conectarse_la_app_aseg_rate_de_estar_conectado_a_la_misma_red_wifi_en_caso_de_cambiar_el_router_es_posible_que_necesites_reconfigurar_la_ip_nn_mero_de_tel_fono_de_soporte_123456789">Objetivo: Reproducir sonidos predeterminados en parlantes, fundación SaludArte.\nDesarrolladores:\n - Rodión Tabares Correa (rrtc26@gmail.com)\n - Angie Carvajal (angiet.carvajal@javeriana.com.co)\n - Juan Esteban (je.campos@javeriana.edu.co)\nConfiguración:\n - Configura la IP del dispositivo en la red local a la cual debe conectarse la app. Asegúrate de estar conectado a la misma red WiFi. En caso de cambiar el router, es posible que necesites reconfigurar la IP.\nNúmero de teléfono de soporte: 3052888470</string>
 </resources>
